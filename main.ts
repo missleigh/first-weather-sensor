@@ -1,8 +1,4 @@
 input.onButtonPressed(Button.A, function () {
-    basic.showNumber(input.temperature() * (9 / 5) + 32)
-    basic.showString("F")
-})
-input.onButtonPressed(Button.B, function () {
     item += 1
 })
 let item = 0
@@ -12,12 +8,16 @@ basic.forever(function () {
         basic.showString("Temp C: ")
         basic.showNumber(Math.idiv(weatherbit.temperature(), 100))
     } else if (item == 1) {
+        basic.showNumber(input.temperature() * (9 / 5) + 32)
+        basic.showString("Temp F:")
+    } else if (item == 2) {
         basic.showString("Humidity %: ")
         basic.showNumber(Math.idiv(weatherbit.humidity(), 1024))
-    } else if (item == 2) {
+    } else if (item == 3) {
         basic.showString("Pressure hPa: ")
         basic.showNumber(Math.idiv(weatherbit.pressure(), 25600))
     } else {
         item = 0
+        basic.pause(100)
     }
 })
