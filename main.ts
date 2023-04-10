@@ -8,8 +8,8 @@ basic.forever(function () {
         basic.showString("Temp C: ")
         basic.showNumber(Math.idiv(weatherbit.temperature(), 100))
     } else if (item == 1) {
-        basic.showNumber(input.temperature() * (9 / 5) + 32)
         basic.showString("Temp F:")
+        basic.showNumber(input.temperature() * (9 / 5) + 32)
     } else if (item == 2) {
         basic.showString("Humidity %: ")
         basic.showNumber(Math.idiv(weatherbit.humidity(), 1024))
