@@ -18,6 +18,5 @@ basic.forever(function () {
         basic.showNumber(Math.idiv(weatherbit.pressure(), 25600))
     } else {
         item = 0
-        basic.pause(100)
     }
 })
